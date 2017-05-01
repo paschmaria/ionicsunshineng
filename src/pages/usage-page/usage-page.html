@@ -1,0 +1,29 @@
+<!--
+  Generated template for the UsagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div  *ngFor = "let appliance of appliances">
+  <ion-card>
+    
+    <ion-card-header>
+      {{appliance.name}}
+    </ion-card-header>
+
+    <ion-card-content>
+      {{appliance.description}}
+      <img [src] = "appliance.imageLink" class = "card-img">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label> Units : </ion-label>
+    <ion-input [(ngModel)] = "appliance.units" placeholder  = "0" (ngModelChange) = "changed(appliance)"> </ion-input>
+  </ion-item>
+</div>
+
+<button ion-button (click) = "addAppliance()" > ADD CUSTOM APPLIANCE </button>
+
+<usage-bar [style.background]="backgroundColor"></usage-bar>

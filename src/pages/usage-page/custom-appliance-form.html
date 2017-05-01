@@ -1,0 +1,20 @@
+<ion-item>
+    <ion-label> Appliance Name : </ion-label>
+    <ion-input [(ngModel)] = "name" placeholder  = "name" (ngModelChange) = "validate()"> </ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label> Appliance Description : </ion-label>
+    <ion-input [(ngModel)] = "description" placeholder  = "description" (ngModelChange) = "validate()"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label> Power Consumed By Appliance : </ion-label>
+    <ion-input [(ngModel)] = "powerConsumed" placeholder  = "Power Consumed" (ngModelChange) = "validate()"> </ion-input>
+  </ion-item>  
+
+  <br>
+  
+  <button ion-button [disabled] = "formDisabled" (click) = "save()"> Submit </button>  
+  
+  
